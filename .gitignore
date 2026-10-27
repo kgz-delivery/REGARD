@@ -1,0 +1,14 @@
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor and temporary files
+.vscode/
+.idea/
+*.log
+*.tmp
+~$*
+
+# Unused local brand asset (kept on disk)
+/image/REGARG_LOGO.png

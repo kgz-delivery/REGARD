@@ -1,0 +1,42 @@
+/* Monitor catalog */
+.monitors-hero {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: calc(var(--nav-total) + 4.5rem) 1.25rem 3rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+.monitors-hero h1 { margin: 0 0 .9rem; color: #f5f3f1; font-size: clamp(2.4rem,5vw,4rem); line-height: 1.05; letter-spacing: -.055em; font-weight: 600; }
+.monitors-hero > p:last-child { max-width: 620px; margin: 0 auto; color: #aaa6a3; }
+.monitors-main { padding-top: 2.5rem; }
+.monitor-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 1rem; }
+.monitor-card { display: flex; flex-direction: column; }
+.monitor-image-link { display: block; position: relative; }
+.monitor-image-link img { object-fit: contain; padding: 1.1rem; transition: transform .3s ease; }
+.monitor-image-link:hover img { transform: scale(1.035); }
+.monitor-refresh { position: absolute; right: .85rem; bottom: .85rem; padding: .35rem .6rem; border-radius: 999px; color: #fff; background: #c6131d; font-size: .75rem; font-weight: 600; letter-spacing: .02em; }
+.monitor-card .build-card-body { display: flex; flex-direction: column; flex: 1; }
+.monitor-brand { margin: 0 0 .2rem; color: #e64a52; font-size: .69rem; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; }
+.monitor-card h2 { margin: 0 0 .55rem; font-size: 1.1rem; font-weight: 600; letter-spacing: -.02em; }
+.monitor-card h2 a { color: #f4f2f0; }
+.monitor-card h2 a:hover { color: #fff; }
+.monitor-card .build-specs { min-height: 3.2rem; }
+.monitor-card .build-price { margin-top: auto; font-family: var(--font-body); font-weight: 600; }
+.monitor-card .btn-card { margin-top: .5rem; }
+.monitors-note { margin: 2rem 0 0; color: #898481; font-size: .84rem; text-align: center; }
+.browse-section { padding-top: 3rem; }
+.browse-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1rem; max-width: 1280px; margin: 0 auto; }
+.browse-card { min-height: 250px; position: relative; overflow: hidden; display: flex; align-items: flex-end; border: 1px solid rgba(255,255,255,.12); border-radius: .8rem; background: #111113; color: #fff; isolation: isolate; }
+.browse-card > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .68; transition: transform .45s ease, opacity .3s ease; }
+.browse-card:nth-child(2) > img { object-fit: contain; padding: 1.25rem; opacity: .85; }
+.browse-card:hover > img { transform: scale(1.045); opacity: .92; }
+.browse-card-shade { position: absolute; inset: 0; background: linear-gradient(180deg,rgba(0,0,0,.04) 5%,rgba(0,0,0,.82) 100%); z-index: 1; }
+.browse-card-copy { position: relative; z-index: 2; display: flex; flex-direction: column; padding: 1.35rem; gap: .12rem; }
+.browse-card-index { color: #ef6870; font-size: .72rem; letter-spacing: .12em; }
+.browse-card-copy strong { font-size: 1.25rem; font-weight: 600; letter-spacing: -.02em; }
+.browse-card-copy > span:last-child { color: rgba(255,255,255,.72); font-size: .8rem; }
+.browse-card-arrow { position: absolute; z-index: 2; right: 1.25rem; bottom: 1.3rem; width: 2.3rem; height: 2.3rem; display: grid; place-items: center; border: 1px solid rgba(255,255,255,.5); border-radius: 50%; transition: color .2s, background .2s, border .2s; }
+.browse-card:hover .browse-card-arrow { color: #fff; background: #c6131d; border-color: #c6131d; }
+.browse-card:focus-visible, .monitor-image-link:focus-visible, .monitor-card a:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+@media(max-width:1050px){.monitor-grid{grid-template-columns:repeat(2,minmax(0,1fr));}.browse-card{min-height:220px;}}
+@media(max-width:640px){.monitors-hero{padding-top:calc(var(--nav-total) + 3.5rem);}.monitor-grid{grid-template-columns:1fr;}.browse-grid{grid-template-columns:1fr;}.browse-card{min-height:210px;}.monitors-main{padding-top:1.5rem;}}
